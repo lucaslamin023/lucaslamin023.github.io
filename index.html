@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Fellype | Portfólio de Análise de Dados, BI & Machine Learning</title>
+    <meta name="description" content="Portfólio profissional de Lucas Fellype Lamin Borges. Analista de Dados com foco em BI, SQL, Python, Auditoria de Estoque e Machine Learning.">
+    <meta name="keywords" content="Data Analytics, BI, Machine Learning, Power BI, Python, SQL, Auditoria de Estoque, Lucas Borges, FIAP">
+    
+    <!-- Open Graph / Meta Tags Sociais -->
+    <meta property="og:title" content="Lucas Fellype | Portfólio de Análise de Dados & BI">
+    <meta property="og:description" content="Transformando dados brutos em KPIs estratégicos, dashboards e modelos preditivos de Machine Learning.">
+    <meta property="og:type" content="website">
+
+    <!-- CSS do Projeto & Fontes CDN -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       HEADER & NAVEGAÇÃO FIAP STYLE
+       ========================================================================== -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-tag">// DATA & BI</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#experiencia" class="nav-link">Trajetória</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <a href="https://www.linkedin.com/in/lucas-fellype-lamin-borges-a7b437236/" target="_blank" class="btn btn-primary btn-sm">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <button class="mobile-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge-status">
+                        <span class="status-dot"></span> Disponível para Oportunidades & Projetos
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Olá, sou <span class="gradient-text">Lucas Lamin</span>
+                    </h1>
+                    
+                    <div class="typing-container">
+                        <span id="typed-text"></span><span class="typed-cursor"></span>
+                    </div>
+                    
+                    <p class="hero-description">
+
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="#projetos" class="btn btn-primary">
+                            <i class="fas fa-chart-line"></i> Explorar Projetos
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5524998789311" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/lucaslamin023" target="_blank" class="social-btn" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lucas-fellype-lamin-borges-a7b437236/" target="_blank" class="social-btn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <button onclick="copyToClipboard('lucaslamin098@gmail.com', 'E-mail')" class="social-btn" title="Copiar E-mail">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- METRICAS / KPIS NO HERO -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="6" data-suffix="+">0+</span>
+                            <span class="stat-label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4000" data-suffix="+">0+</span>
+                            <span class="stat-label">Horas de Estudo</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10000" data-suffix="+">0+</span>
+                            <span class="stat-label">Cafés Tomados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD PERFIL FIAP ESTILO FUTURISTA -->
+                <div class="hero-visual">
+                    <div class="glass-card hero-card">
+                        <div class="hero-card-glow"></div>
+                        
+                        <div class="profile-avatar">
+                            <div class="profile-avatar-inner">
+                                LB
+                            </div>
+                        </div>
+                        
+                        <h2 class="hero-card-title">Lucas Lamin Borges</h2>
+                        <p class="hero-card-subtitle">Análise de Dados | Auditoria & BI</p>
+
+                        <div class="tech-badges">
+                            <span class="tech-badge"><i class="fab fa-python" style="color:#ff0055"></i> Python</span>
+                            <span class="tech-badge"><i class="fas fa-database" style="color:#00f2fe"></i> SQL</span>
+                            <span class="tech-badge"><i class="fas fa-chart-bar" style="color:#ffcc00"></i> Power BI</span>
+                            <span class="tech-badge"><i class="fas fa-brain" style="color:#a855f7"></i> Machine Learning</span>
+                            <span class="tech-badge"><i class="fas fa-boxes" style="color:#10b981"></i> Protheus TOTVS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEÇÃO DE PROJETOS COM CARROSSEL (3 CARDS POR VEZ)
+       ========================================================================== -->
+    <section id="projetos" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfólio Analítico</span>
+                <h2 class="section-title">Projetos em <span class="gradient-text">Destaque</span></h2>
+                <p class="section-subtitle">
+                    Explore soluções reais desenvolvidas com Machine Learning, Python, Power BI e SQL. O carrossel exibe 3 projetos por vez e inclui apresentações interativas em HTML.
+                </p>
+            </div>
+
+            <!-- FILTROS DE CATEGORIA -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning & Forecast</button>
+                <button class="filter-btn" data-filter="bi">Power BI & Dashboards</button>
+                <button class="filter-btn" data-filter="auditoria">Auditoria & Estoque</button>
+                <button class="filter-btn" data-filter="python">Python & ETL</button>
+            </div>
+
+            <!-- CARROSSEL DE PROJETOS -->
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        
+                        <!-- CARD 1: GLOBAL SUPERSTORE (PROJETO REAL PREPARADO) -->
+                        <div class="glass-card project-card" data-category="ml python">
+                            <div class="project-img-wrapper">
+                                <img src="assets/images/global-superstore.png" alt="Global Superstore Project" class="project-img">
+                                <span class="project-overlay-badge">HTML</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="project-tag">Machine Learning</span>
+                                    <span class="project-tag">Prophet</span>
+                                    <span class="project-tag">Python</span>
+                                </div>
+                                <h3 class="project-title">Análise e Previsão de Vendas</h3>
+                                <p class="project-description">
+                                    Análise preditiva e de séries temporais, utilizando o algoritmo Prophet para projetar futuras vendas, identificando padrões de sazonalidade e gargalos de rentabilidade.
+                                </p>
+                                <div class="project-actions">
+                                    <button onclick="openProjectModal('Global Superstore - Apresentação Executiva', 'projects/superstore-analysis.html')" class="btn btn-primary btn-sm project-btn">
+                                        <i class="fas fa-desktop"></i> Ver Apresentação
+                                    </button>
+                                    <a href="https://github.com/lucaslamin023/Data-Project-1---Global-Superstore-Sales-Analysis-Forecasting" target="_blank" class="btn btn-secondary btn-sm project-btn" title="Repositório GitHub">
+                                        <i class="fab fa-github"></i> Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: AUTOMATION & AUDIT (TEMPLATE CONFIGURADO PARA PROJETO 2) -->
+                        <div class="glass-card project-card" data-category="auditoria python">
+                            <div class="project-img-wrapper" style="background: linear-gradient(135deg, #161626, #24142c); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-boxes-stacked" style="font-size: 4rem; color: var(--fiap-pink); opacity: 0.8;"></i>
+                                <span class="project-overlay-badge">PROJETO 2</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="project-tag">Power BI</span>
+                                    <span class="project-tag">SQL</span>
+                                    <span class="project-tag">DAX</span>
+                                </div>
+                                <h3 class="project-title">Análise e Prevenção de Perdas</h3>
+                                <p class="project-description">
+                                    Dashboard interativo em Power BI para acompanhamento de indicadores de perda, acuracidade de estoque e score de risco.
+                                </p>
+                                <div class="project-actions">
+                                    <a href="https://github.com/lucaslamin023" target="_blank" class="btn btn-primary btn-sm project-btn">
+                                        <i class="fas fa-folder-open"></i> Ver no GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: POWER BI DASHBOARD (TEMPLATE CONFIGURADO PARA PROJETO 3) -->
+                        <div class="glass-card project-card" data-category="bi">
+                            <div class="project-img-wrapper" style="background: linear-gradient(135deg, #101a28, #00223e); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chart-pie" style="font-size: 4rem; color: var(--cyan-accent); opacity: 0.8;"></i>
+                                <span class="project-overlay-badge">PROJETO 3</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="project-tag">Power BI</span>
+                                    <span class="project-tag">DAX</span>
+                                    <span class="project-tag">ETL</span>
+                                </div>
+                                <h3 class="project-title">Saúde Financeira Municipal</h3>
+                                <p class="project-description">
+                                    Pipline completa de extralção de dados do munícipio de Volta Redonda + Dashboard interativo em Power BI para acompanhamento orçamentário e financeiro da cidade.
+                                </p>
+                                <div class="project-actions">
+                                    <a href="https://github.com/lucaslamin023" target="_blank" class="btn btn-primary btn-sm project-btn">
+                                        <i class="fas fa-folder-open"></i> Ver no GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 4: MACHINE LEARNING MODELING (TEMPLATE 4) -->
+                        <div class="glass-card project-card" data-category="ml">
+                            <div class="project-img-wrapper" style="background: linear-gradient(135deg, #1e1028, #2a0833); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-brain" style="font-size: 4rem; color: #a855f7; opacity: 0.8;"></i>
+                                <span class="project-overlay-badge">PROJETO 4</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="project-tag">Scikit-Learn</span>
+                                    <span class="project-tag">Machine Learning</span>
+                                </div>
+                                <h3 class="project-title">Churn e Retenção de Clientes</h3>
+                                <p class="project-description">
+                                    Modelo de aprendizado de máquina para identificação de padrões de cancelamento e classificação de risco de churn com pipelines de Scikit-Learn.
+                                </p>
+                                <div class="project-actions">
+                                    <a href="https://github.com/lucaslamin023" target="_blank" class="btn btn-secondary btn-sm project-btn">
+                                        <i class="fab fa-github"></i> Ver Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 5: DATA ANALYSIS & EDA (TEMPLATE 5) -->
+                        <div class="glass-card project-card" data-category="python">
+                            <div class="project-img-wrapper" style="background: linear-gradient(135deg, #14241e, #063820); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-magnifying-glass-chart" style="font-size: 4rem; color: #10b981; opacity: 0.8;"></i>
+                                <span class="project-overlay-badge">PROJETO 5</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">Front End</span>
+                                    <span class="project-tag">FastAPI</span>
+                                </div>
+                                <h3 class="project-title">Simulação de Copa do Mundo</h3>
+                                <p class="project-description">
+                                    Projeto de análise e classificaão de jogadores por meio de base histórica de todos os jogos da copa do mundo + aplicação que simula competições, partidas, artilharia, etc.
+                                </p>
+                                <div class="project-actions">
+                                    <a href="https://github.com/lucaslamin023" target="_blank" class="btn btn-secondary btn-sm project-btn">
+                                        <i class="fab fa-github"></i> Ver Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 6: CONTROL TOWER BI (TEMPLATE 6) -->
+                        <div class="glass-card project-card" data-category="bi auditoria">
+                            <div class="project-img-wrapper" style="background: linear-gradient(135deg, #261616, #3b0610); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-tower-observation" style="font-size: 4rem; color: #f43f5e; opacity: 0.8;"></i>
+                                <span class="project-overlay-badge">PROJETO 6</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">SQL</span>
+                                    <span class="project-tag">Operações</span>
+                                </div>
+                                <h3 class="project-title">Algoritmo de Recomendação</h3>
+                                <p class="project-description">
+                                    Algoritmo de recomendação filmográfica com múltiplos critérios + aplicação 
+                                </p>
+                                <div class="project-actions">
+                                    <a href="https://github.com/lucaslamin023" target="_blank" class="btn btn-secondary btn-sm project-btn">
+                                        <i class="fab fa-github"></i> Ver Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CONTROLES DO CARROSSEL -->
+                <div class="carousel-controls">
+                    <button class="carousel-nav-btn carousel-prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots"></div>
+                    <button class="carousel-nav-btn carousel-next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       MODAL DE VISUALIZAÇÃO INTERATIVA DE PROJETOS (IFRAME)
+       ========================================================================== -->
+    <div id="project-modal" class="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-chart-line" style="color: var(--fiap-pink);"></i>
+                    <span id="modal-project-title">Visualizador de Projeto</span>
+                </div>
+                <div class="modal-actions">
+                    <a id="modal-external-link" href="#" target="_blank" class="btn btn-secondary btn-sm" title="Abrir em Nova Aba">
+                        <i class="fas fa-external-link-alt"></i> Tela Cheia
+                    </a>
+                    <button class="modal-close-btn" aria-label="Fechar Modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe id="modal-iframe" class="modal-iframe" src="about:blank"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SEÇÃO SOBRE O PROFISSIONAL
+       ========================================================================== -->
+    <section id="sobre" class="section-padding" style="background: rgba(16, 16, 24, 0.4);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perfil Profissional</span>
+                <h2 class="section-title">Sobre <span class="gradient-text">Lucas Lamin</span></h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="glass-card" style="padding: 32px;">
+                    <div style="font-size: 2.2rem; color: var(--fiap-pink); margin-bottom: 16px;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;">
+                        Foco em Dados
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+
+                    </p>
+                </div>
+
+                <div class="glass-card" style="padding: 32px;">
+                    <div style="font-size: 2.2rem; color: var(--cyan-accent); margin-bottom: 16px;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;">
+                        Base Técnica Sólida
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Formado em Análise e Desenvolvimento de Sistemas pela <strong>FIAP</strong> (2021-2023) e atualmente graduando em <strong>Ciência de Dados</strong> pela Unicesumar (Conclusão 2028).
+                    </p>
+                </div>
+
+                <div class="glass-card" style="padding: 32px;">
+                    <div style="font-size: 2.2rem; color: #a855f7; margin-bottom: 16px;">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;">
+                        Comunicação & Data Storytelling
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       HABILIDADES & TECH STACK
+       ========================================================================== -->
+    <section id="habilidades" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Competências Técnicas</span>
+                <h2 class="section-title">Habilidades & <span class="gradient-text">Tech Stack</span></h2>
+                <p class="section-subtitle">Ferramentas e linguagens utilizadas para extração, modelagem, análise e visualização de dados.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- CATEGORIA 1 -->
+                <div class="glass-card skill-category">
+                    <h3 class="skill-category-title"><i class="fab fa-python"></i> Linguagens & ML</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python (Pandas, NumPy, Prophet)</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL (Consultas, Joins, Window Functions)</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning & Forecast</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="82%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORIA 2 -->
+                <div class="glass-card skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-chart-line"></i> Business Intelligence & Viz</h3>
+                    <div class="skills-list">
+                    </div>
+                </div>
+
+                <!-- CATEGORIA 3 -->
+                <div class="glass-card skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-server"></i> Sistemas & Processos</h3>
+                    <div class="skills-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SEÇÃO DE CONTATO & FOOTER
+       ========================================================================== -->
+    <section id="contato" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conecte-se Comigo</span>
+                <h2 class="section-title">Vamos <span class="gradient-text">Conversar?</span></h2>
+                <p class="section-subtitle">
+                    Estou aberto a oportunidades profissionais, consultorias e parcerias em Análise de Dados, BI e Machine Learning.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- CARD EMAIL -->
+                <div class="glass-card contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3 class="contact-title">E-mail</h3>
+                    <p class="contact-value">lucaslamin098@gmail.com</p>
+                    <button onclick="copyToClipboard('lucaslamin098@gmail.com', 'E-mail')" class="btn btn-secondary btn-sm" style="margin-top: 8px;">
+                        <i class="fas fa-copy"></i> Copiar E-mail
+                    </button>
+                </div>
+
+                <!-- CARD TELEFONE / WHATSAPP -->
+                <div class="glass-card contact-card">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3 class="contact-title">WhatsApp / Telefone</h3>
+                    <p class="contact-value">(24) 99878-9311</p>
+                    <a href="https://api.whatsapp.com/send?phone=5524998789311" target="_blank" class="btn btn-primary btn-sm" style="margin-top: 8px;">
+                        <i class="fab fa-whatsapp"></i> Abrir WhatsApp
+                    </a>
+                </div>
+
+                <!-- CARD LINKEDIN -->
+                <div class="glass-card contact-card">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <h3 class="contact-title">LinkedIn</h3>
+                    <p class="contact-value">lucas-fellype-lamin-borges</p>
+                    <a href="https://www.linkedin.com/in/lucas-fellype-lamin-borges-a7b437236/" target="_blank" class="btn btn-secondary btn-sm" style="margin-top: 8px;">
+                        <i class="fas fa-external-link-alt"></i> Ver Perfil
+                    </a>
+                </div>
+
+                <!-- CARD GITHUB -->
+                <div class="glass-card contact-card">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h3 class="contact-title">GitHub</h3>
+                    <p class="contact-value">lucaslamin023</p>
+                    <a href="https://github.com/lucaslamin023" target="_blank" class="btn btn-secondary btn-sm" style="margin-top: 8px;">
+                        <i class="fas fa-external-link-alt"></i> Ver Repositórios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Lucas Fellype Lamin Borges.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PRINCIPAL -->
+    <script src="js/main.js"></script>
+</body>
+</html>
