@@ -1,8 +1,3 @@
-/**
- * PORTFÓLIO DATA ANALYTICS, BI & MACHINE LEARNING - LUCAS FELLYPE LAMIN BORGES
- * Script Principal Interativo
- */
-
 document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMobileMenu();
@@ -197,7 +192,7 @@ function initCarousel() {
         if (!dotsContainer) return;
         dotsContainer.innerHTML = '';
         const maxIdx = getMaxIndex();
-        
+
         for (let i = 0; i <= maxIdx; i++) {
             const dot = document.createElement('div');
             dot.classList.add('carousel-dot');
@@ -210,7 +205,7 @@ function initCarousel() {
     function updateCarousel() {
         const maxIdx = getMaxIndex();
         currentIndex = Math.min(Math.max(0, currentIndex), maxIdx);
-        
+
         prevTranslate = -getMoveAmountForIndex(currentIndex);
         currentTranslate = prevTranslate;
         setTrackPosition();
@@ -333,7 +328,7 @@ function initProjectModal() {
 
     if (!modal || !iframe) return;
 
-    window.openProjectModal = function(projectTitle, htmlPath) {
+    window.openProjectModal = function (projectTitle, htmlPath) {
         if (modalTitle) modalTitle.textContent = projectTitle;
         iframe.src = htmlPath;
         if (openExternalBtn) openExternalBtn.href = htmlPath;
@@ -408,7 +403,7 @@ function initSkillBars() {
 }
 
 /* --- 8. HELPER COPY TO CLIPBOARD --- */
-window.copyToClipboard = function(text, label) {
+window.copyToClipboard = function (text, label) {
     navigator.clipboard.writeText(text).then(() => {
         showToast(`Copiado: ${label}!`);
     }).catch(err => {
