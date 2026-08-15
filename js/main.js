@@ -1,5 +1,5 @@
 /**
- * PORTFÓLIO DATA ANALYTICS & BI - LUCAS FELLYPE LAMIN BORGES
+ * PORTFÓLIO DATA ANALYTICS, BI & MACHINE LEARNING - LUCAS FELLYPE LAMIN BORGES
  * Script Principal Interativo
  */
 
@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     initProjectModal();
     initProjectFilter();
-    initExperienceTabs();
     initSkillBars();
 });
 
@@ -21,7 +20,7 @@ function initHeaderScroll() {
     const sections = document.querySelectorAll('section[id]');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
@@ -81,9 +80,9 @@ function initTypingEffect() {
     if (!targetEl) return;
 
     const phrases = [
-        "Analista de Dados & BI",
-        "Estudante de Machine Learning",
-        "Cientista de Dados em Formação",
+        "Analista de Dados",
+        "BI & Machine Learning",
+        "Auditoria de Estoque"
     ];
 
     let phraseIdx = 0;
@@ -93,7 +92,7 @@ function initTypingEffect() {
 
     function type() {
         const currentPhrase = phrases[phraseIdx];
-        
+
         if (isDeleting) {
             targetEl.textContent = currentPhrase.substring(0, charIdx - 1);
             charIdx--;
@@ -106,7 +105,7 @@ function initTypingEffect() {
 
         if (!isDeleting && charIdx === currentPhrase.length) {
             isDeleting = true;
-            typeSpeed = 2000; // Pause no final da frase
+            typeSpeed = 2000;
         } else if (isDeleting && charIdx === 0) {
             isDeleting = false;
             phraseIdx = (phraseIdx + 1) % phrases.length;
@@ -119,7 +118,7 @@ function initTypingEffect() {
     type();
 }
 
-/* --- 4. ANIMATED STATS COUNTER --- */
+/* --- 3. ANIMATED STATS COUNTER --- */
 function initStatsCounter() {
     const statNumbers = document.querySelectorAll('.stat-number');
     let animated = false;
@@ -130,7 +129,7 @@ function initStatsCounter() {
             const prefix = stat.getAttribute('data-prefix') || '';
             const suffix = stat.getAttribute('data-suffix') || '';
             let count = 0;
-            const duration = 2000;
+            const duration = 1800;
             const step = Math.ceil(target / (duration / 30));
 
             const timer = setInterval(() => {
@@ -144,19 +143,19 @@ function initStatsCounter() {
         });
     }
 
-    const heroSection = document.getElementById('home');
-    if (heroSection) {
+    const statsSection = document.getElementById('stats');
+    if (statsSection) {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && !animated) {
                 animated = true;
                 startCount();
             }
-        }, { threshold: 0.3 });
-        observer.observe(heroSection);
+        }, { threshold: 0.2 });
+        observer.observe(statsSection);
     }
 }
 
-/* --- 5. CARROSSEL DE PROJETOS (ARRÁSTÁVEL COM MOUSE E TOUCH - 3 CARDS) --- */
+/* --- 4. CARROSSEL DE PROJETOS (ARRÁSTÁVEL COM MOUSE E TOUCH - 3 CARDS) --- */
 function initCarousel() {
     const container = document.querySelector('.carousel-container');
     const track = document.querySelector('.carousel-track');
@@ -175,12 +174,11 @@ function initCarousel() {
     let animationId = 0;
     let hasMoved = false;
 
-    // Quantos cards ficam visíveis simultaneamente
     function getVisibleCardsCount() {
         const width = window.innerWidth;
         if (width <= 768) return 1;
         if (width <= 1024) return 2;
-        return 3; // 3 cards no desktop
+        return 3;
     }
 
     function getMaxIndex() {
@@ -190,7 +188,7 @@ function initCarousel() {
 
     function getMoveAmountForIndex(index) {
         if (cards.length === 0) return 0;
-        const gap = 24; // Gap do CSS
+        const gap = 24;
         const cardWidth = cards[0].getBoundingClientRect().width;
         return (cardWidth + gap) * index;
     }
@@ -248,9 +246,7 @@ function initCarousel() {
         });
     }
 
-    // --- LÓGICA DE DRAG / ARRASTAR COM MOUSE E TOUCH ---
     function dragStart(e) {
-        // Ignorar se o clique ocorreu em um botão ou link específico dentro do card
         if (e.target.closest('button, a')) return;
 
         isDragging = true;
@@ -279,7 +275,7 @@ function initCarousel() {
         track.classList.remove('dragging');
 
         const movedBy = currentTranslate - prevTranslate;
-        const threshold = 60; // Distância mínima em pixels para trocar de slide
+        const threshold = 60;
 
         if (movedBy < -threshold && currentIndex < getMaxIndex()) {
             currentIndex += 1;
@@ -299,7 +295,6 @@ function initCarousel() {
         if (isDragging) requestAnimationFrame(animation);
     }
 
-    // Prevenir clique acidental em botões/links durante o arraste
     cards.forEach(card => {
         card.addEventListener('click', (e) => {
             if (hasMoved) {
@@ -309,13 +304,11 @@ function initCarousel() {
         }, true);
     });
 
-    // Mouse Events
     if (container) {
         container.addEventListener('mousedown', dragStart);
         window.addEventListener('mousemove', dragMove);
         window.addEventListener('mouseup', dragEnd);
 
-        // Touch Events
         container.addEventListener('touchstart', dragStart, { passive: true });
         window.addEventListener('touchmove', dragMove, { passive: true });
         window.addEventListener('touchend', dragEnd);
@@ -330,7 +323,7 @@ function initCarousel() {
     updateCarousel();
 }
 
-/* --- 6. MODAL INTERATIVO DE PROJETOS (IFRAME HTML VIEWER) --- */
+/* --- 5. MODAL INTERATIVO DE PROJETOS (IFRAME HTML VIEWER) --- */
 function initProjectModal() {
     const modal = document.getElementById('project-modal');
     const iframe = document.getElementById('modal-iframe');
@@ -367,7 +360,7 @@ function initProjectModal() {
     });
 }
 
-/* --- 7. FILTRO DE CATEGORIA DOS PROJETOS --- */
+/* --- 6. FILTRO DE CATEGORIA DOS PROJETOS --- */
 function initProjectFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
@@ -388,55 +381,36 @@ function initProjectFilter() {
                 }
             });
 
-            // Reiniciar carrossel após filtro
             initCarousel();
         });
     });
 }
 
-/* --- 8. EXPERIÊNCIA & FORMAÇÃO TAB SWITCHER --- */
-function initExperienceTabs() {
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-tab');
-
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.style.display = 'none');
-
-            btn.classList.add('active');
-            const activeContent = document.getElementById(`tab-${target}`);
-            if (activeContent) {
-                activeContent.style.display = 'block';
-            }
-        });
-    });
-}
-
-/* --- 9. ANIMAÇÃO DE BARRAS DE HABILIDADE --- */
+/* --- 7. ANIMAÇÃO DE BARRAS DE HABILIDADE --- */
 function initSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    const skillsSection = document.getElementById('habilidades');
+    const skillFills = document.querySelectorAll('.skill-fill');
+    const aboutSection = document.getElementById('sobre');
 
-    if (skillsSection && skillBars.length > 0) {
+    if (aboutSection && skillFills.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-                skillBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width') || '80%';
-                    bar.style.width = width;
+                skillFills.forEach(fill => {
+                    const targetWidth = fill.style.width || '80%';
+                    fill.style.width = '0%';
+                    setTimeout(() => {
+                        fill.style.width = targetWidth;
+                    }, 100);
                 });
             }
         }, { threshold: 0.2 });
-        observer.observe(skillsSection);
+        observer.observe(aboutSection);
     }
 }
 
-/* --- 10. HELPER COPY TO CLIPBOARD --- */
+/* --- 8. HELPER COPY TO CLIPBOARD --- */
 window.copyToClipboard = function(text, label) {
     navigator.clipboard.writeText(text).then(() => {
-        showToast(`Copiat: ${label}!`);
+        showToast(`Copiado: ${label}!`);
     }).catch(err => {
         showToast(`Erro ao copiar: ${err}`);
     });
