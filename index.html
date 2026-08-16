@@ -261,8 +261,7 @@
                 <span class="section-tag">Portfólio</span>
                 <h2 class="section-title">Confira Alguns dos Meus Projetos</h2>
                 <p class="section-subtitle">
-                    Explore projetos práticos desenvolvidos com Machine Learning, Python, Power BI, SQL e Auditoria
-                    Analítica.
+                    Explore projetos práticos desenvolvidos com Machine Learning, Python, Power BI e SQL
                 </p>
             </div>
 
@@ -271,7 +270,6 @@
                 <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
                 <button class="filter-btn" data-filter="ml">Machine Learning & Forecast</button>
                 <button class="filter-btn" data-filter="bi">Power BI & Dashboards</button>
-                <button class="filter-btn" data-filter="auditoria">Auditoria & Estoque</button>
                 <button class="filter-btn" data-filter="python">Python & ETL</button>
             </div>
 
@@ -302,7 +300,7 @@
                                     <button
                                         onclick="openProjectModal('Global Superstore - Apresentação Executiva', 'projects/superstore-analysis.html')"
                                         class="btn btn-primary btn-sm project-btn">
-                                        <i class="fas fa-desktop"></i> Ver Apresentação
+                                        <i class="fas fa-desktop"></i>Apresentação
                                     </button>
                                     <a href="https://github.com/lucaslamin023/Data-Project-1---Global-Superstore-Sales-Analysis-Forecasting"
                                         target="_blank" class="btn btn-stroke btn-sm project-btn"
@@ -315,27 +313,25 @@
 
                         <!-- CARD 2: AUDITORIA & ESTOQUE -->
                         <div class="project-card" data-category="auditoria python">
-                            <div class="project-img-wrapper"
-                                style="background: #181818; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-boxes-stacked"
-                                    style="font-size: 3.5rem; color: var(--accent-pink); opacity: 0.85;"></i>
+                            <div class="project-img-wrapper">
+                                <img src="assets\images\PrevençãoDePerda.jpg" alt="Prevenção de Perdas"
+                                    class="project-img">
                                 <span class="project-overlay-badge">POWER BI & SQL</span>
                             </div>
                             <div class="project-content">
                                 <div class="project-tags">
                                     <span class="project-tag">Power BI</span>
                                     <span class="project-tag">SQL</span>
-                                    <span class="project-tag">Protheus</span>
                                 </div>
                                 <h3 class="project-title">Análise e Prevenção de Perdas</h3>
                                 <p class="project-description">
-                                    Dashboard para acompanhamento de acuracidade de estoque, score de risco de
-                                    inventário e redução de divergências operacionais.
+                                    Dashboard para acompanhamento de perdas, faturamento, score de risco de
+                                    produtos e redução de divergências operacionais.
                                 </p>
                                 <div class="project-actions">
-                                    <a href="https://github.com/lucaslamin023" target="_blank"
-                                        class="btn btn-stroke btn-sm project-btn">
-                                        <i class="fab fa-github"></i> Ver no GitHub
+                                    <a href="https://app.fabric.microsoft.com/links/_4vRjEfAun?ctid=81a170b0-179f-49c4-be93-e2d85bc6a91b&pbi_source=linkShare"
+                                        target="_blank" class="btn btn-stroke btn-sm project-btn">
+                                        <i class="fab fa-github"></i> Ver Dashboard
                                     </a>
                                 </div>
                             </div>
@@ -343,10 +339,9 @@
 
                         <!-- CARD 3: SAÚDE FINANCEIRA MUNICIPAL -->
                         <div class="project-card" data-category="bi">
-                            <div class="project-img-wrapper"
-                                style="background: #181818; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-chart-pie"
-                                    style="font-size: 3.5rem; color: #00bcd4; opacity: 0.85;"></i>
+                            <div class="project-img-wrapper">
+                                <img src="assets\images\Volta Redonda.png" alt="Saúde Financeira Municipal"
+                                    class="project-img">
                                 <span class="project-overlay-badge">POWER BI</span>
                             </div>
                             <div class="project-content">
@@ -361,111 +356,26 @@
                                     em Power BI para acompanhamento orçamentário.
                                 </p>
                                 <div class="project-actions">
-                                    <a href="https://github.com/lucaslamin023" target="_blank"
-                                        class="btn btn-stroke btn-sm project-btn">
+                                    <a href="https://github.com/lucaslamin023/volta_redonda_finance_dashboard"
+                                        target="_blank" class="btn btn-stroke btn-sm project-btn">
                                         <i class="fab fa-github"></i> Ver no GitHub
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- CARD 4: CHURN & RETENÇÃO -->
-                        <div class="project-card" data-category="ml">
-                            <div class="project-img-wrapper"
-                                style="background: #181818; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-brain" style="font-size: 3.5rem; color: #a855f7; opacity: 0.85;"></i>
-                                <span class="project-overlay-badge">PYTHON</span>
-                            </div>
-                            <div class="project-content">
-                                <div class="project-tags">
-                                    <span class="project-tag">Scikit-Learn</span>
-                                    <span class="project-tag">Machine Learning</span>
-                                </div>
-                                <h3 class="project-title">Churn e Retenção de Clientes</h3>
-                                <p class="project-description">
-                                    Modelo preditivo para identificação de padrões de cancelamento e classificação de
-                                    risco de churn com pipelines de Scikit-Learn.
-                                </p>
-                                <div class="project-actions">
-                                    <a href="https://github.com/lucaslamin023" target="_blank"
-                                        class="btn btn-stroke btn-sm project-btn">
-                                        <i class="fab fa-github"></i> Ver Código
-                                    </a>
-                                </div>
-                            </div>
+                        <!-- CONTROLES DO CARROSSEL -->
+                        <div class="carousel-controls">
+                            <button class="carousel-nav-btn carousel-prev" aria-label="Anterior">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="carousel-dots"></div>
+                            <button class="carousel-nav-btn carousel-next" aria-label="Próximo">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
-
-                        <!-- CARD 5: SIMULAÇÃO COPA -->
-                        <div class="project-card" data-category="python">
-                            <div class="project-img-wrapper"
-                                style="background: #181818; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-magnifying-glass-chart"
-                                    style="font-size: 3.5rem; color: #4caf50; opacity: 0.85;"></i>
-                                <span class="project-overlay-badge">FASTAPI</span>
-                            </div>
-                            <div class="project-content">
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">FastAPI</span>
-                                    <span class="project-tag">Pandas</span>
-                                </div>
-                                <h3 class="project-title">Simulação de Copa do Mundo</h3>
-                                <p class="project-description">
-                                    Análise estatística de dados históricos de partidas de futebol + motor de simulação
-                                    de torneios e probabilidades.
-                                </p>
-                                <div class="project-actions">
-                                    <a href="https://github.com/lucaslamin023" target="_blank"
-                                        class="btn btn-stroke btn-sm project-btn">
-                                        <i class="fab fa-github"></i> Ver Código
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CARD 6: ALGORITMO RECOMENDAÇÃO -->
-                        <div class="project-card" data-category="bi auditoria">
-                            <div class="project-img-wrapper"
-                                style="background: #181818; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-film"
-                                    style="font-size: 3.5rem; color: var(--accent-pink); opacity: 0.85;"></i>
-                                <span class="project-overlay-badge">PYTHON & SQL</span>
-                            </div>
-                            <div class="project-content">
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">SQL</span>
-                                    <span class="project-tag">Filtragem</span>
-                                </div>
-                                <h3 class="project-title">Algoritmo de Recomendação</h3>
-                                <p class="project-description">
-                                    Algoritmo de recomendação filmográfica multicritério com tratamento de dados e
-                                    interface responsiva.
-                                </p>
-                                <div class="project-actions">
-                                    <a href="https://github.com/lucaslamin023" target="_blank"
-                                        class="btn btn-stroke btn-sm project-btn">
-                                        <i class="fab fa-github"></i> Ver Código
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-
-                <!-- CONTROLES DO CARROSSEL -->
-                <div class="carousel-controls">
-                    <button class="carousel-nav-btn carousel-prev" aria-label="Anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="carousel-dots"></div>
-                    <button class="carousel-nav-btn carousel-next" aria-label="Próximo">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ==========================================================================
@@ -503,7 +413,7 @@
             <div class="stats-grid">
                 <div class="stat-box">
                     <div class="stat-icon"><i class="fas fa-pencil-ruler"></i></div>
-                    <div class="stat-number" data-target="6" data-suffix="+">0+</div>
+                    <div class="stat-number" data-target="3" data-suffix="+">0+</div>
                     <div class="stat-label">Projetos Concluídos</div>
                 </div>
 
