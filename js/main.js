@@ -77,7 +77,7 @@ function initTypingEffect() {
     const phrases = [
         "Analista de Dados",
         "BI & Machine Learning",
-        "Auditoria de Estoque"
+        "Auditoria de Processos"
     ];
 
     let phraseIdx = 0;
