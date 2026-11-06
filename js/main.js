@@ -154,12 +154,12 @@ function initStatsCounter() {
 function initCarousel() {
     const container = document.querySelector('.carousel-container');
     const track = document.querySelector('.carousel-track');
-    const cards = document.querySelectorAll('.project-card');
+    const allCards = Array.from(document.querySelectorAll('.project-card'));
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
     const dotsContainer = document.querySelector('.carousel-dots');
 
-    if (!track || cards.length === 0) return;
+    if (!track || allCards.length === 0) return;
 
     let currentIndex = 0;
     let isDragging = false;
@@ -168,6 +168,10 @@ function initCarousel() {
     let prevTranslate = 0;
     let animationId = 0;
     let hasMoved = false;
+
+    function getActiveCards() {
+        return allCards.filter(card => card.style.display !== 'none');
+    }
 
     function getVisibleCardsCount() {
         const width = window.innerWidth;
@@ -178,13 +182,14 @@ function initCarousel() {
 
     function getMaxIndex() {
         const visibleCount = getVisibleCardsCount();
-        return Math.max(0, cards.length - visibleCount);
+        return Math.max(0, getActiveCards().length - visibleCount);
     }
 
     function getMoveAmountForIndex(index) {
-        if (cards.length === 0) return 0;
+        const activeCards = getActiveCards();
+        if (activeCards.length === 0) return 0;
         const gap = 24;
-        const cardWidth = cards[0].getBoundingClientRect().width;
+        const cardWidth = activeCards[0].getBoundingClientRect().width;
         return (cardWidth + gap) * index;
     }
 
@@ -290,7 +295,7 @@ function initCarousel() {
         if (isDragging) requestAnimationFrame(animation);
     }
 
-    cards.forEach(card => {
+    allCards.forEach(card => {
         card.addEventListener('click', (e) => {
             if (hasMoved) {
                 e.preventDefault();
@@ -313,6 +318,12 @@ function initCarousel() {
         renderDots();
         updateCarousel();
     });
+
+    window.refreshCarousel = function () {
+        currentIndex = 0;
+        renderDots();
+        updateCarousel();
+    };
 
     renderDots();
     updateCarousel();
@@ -376,7 +387,9 @@ function initProjectFilter() {
                 }
             });
 
-            initCarousel();
+            if (typeof window.refreshCarousel === 'function') {
+                window.refreshCarousel();
+            }
         });
     });
 }
